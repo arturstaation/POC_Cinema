@@ -1,10 +1,17 @@
-import TituloConteudo from '../app/components/TituloConteudo';
+
+import DadosFilme from './components/DadosFilme';
 
 function HomePage() {
 
   return (
     <main>
-      <TituloConteudo titulo="teste" conteudo="teste2" />
+
+      <div>
+        <div>
+
+        </div>
+        <DadosFilme></DadosFilme>
+      </div>
 
     </main>
   );
