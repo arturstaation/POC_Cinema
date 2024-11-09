@@ -1,14 +1,15 @@
-
+import '../DadosFilme.module.css'
 import TituloConteudo from './TituloConteudo';
+
+
 function DadosFilme() {
-return (
-    <div>
-<TituloConteudo endpoint={"Titulo"} />
-<TituloConteudo endpoint={"Sinopse"} />
-<TituloConteudo endpoint={"Data"} />
-<TituloConteudo endpoint={"Direção"} />
-</div>
-);
+    return (
+        <div>
+            <TituloConteudo endpoint={"Sinopse"} />
+            <TituloConteudo endpoint={"Data"} />
+            <TituloConteudo endpoint={"Direção"} />
+        </div>
+    );
 }
 
 export default DadosFilme;
