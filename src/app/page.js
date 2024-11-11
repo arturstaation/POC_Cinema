@@ -1,4 +1,3 @@
-
 import BotaoComprar from './components/BotaoComprar';
 import DadosFilme from './components/DadosFilme';
 import Sala from './components/Sala';
@@ -9,14 +8,14 @@ import './styles/global.css';
 function HomePage() {
 
   return (
-    <main id={styles.tudo}>
+    <main id={styles.tudo} className='lightMode'>
 
-      <TituloConteudo endpoint={"Titulo"} />
+      <TituloConteudo endpoint="Titulo" />
       <section id={styles.principal} >
         <Sala></Sala>
         <DadosFilme></DadosFilme>
       </section>
-      <BotaoComprar id="compra"></BotaoComprar>
+      <BotaoComprar id="compra" listaAssentos={[]}></BotaoComprar>
     </main>
   );
 

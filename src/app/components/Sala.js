@@ -8,13 +8,13 @@ async function Sala() {
 
 
     return (
-        <section >
-            <div>
-                <Lugares></Lugares>
+        <container id={styles.container_sala}>
+            <div className='espacamento'>
+                <Lugares id={styles.lugares}></Lugares>
                 <Tela></Tela>
             </div>
             <Legenda></Legenda>
-        </section>
+        </container>
     );
 }
 

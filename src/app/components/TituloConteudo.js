@@ -31,9 +31,9 @@ async function TituloConteudo({ endpoint }) {
     }
 
     return (
-        <div id="titulo_conteudo">
-            <h1 id="titulo">{titulo}</h1>
-            <p id="conteudo">{conteudo}</p>
+        <div id={`${endpoint == 'Titulo' ? styles.titulo_conteudo : ''}`}>
+            <h1>{titulo}</h1>
+            <p>{conteudo}</p>
         </div>
     );
 

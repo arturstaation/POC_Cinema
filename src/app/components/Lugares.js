@@ -11,11 +11,12 @@ async function Lugares() {
         response = await request.json();
     }
 
+
     return (
         <div id={styles.todosLugares}>
             {response.map((assento) => (
                 <div
-                    key={assento.id} className={`${styles.assento} ${assento.disponivel ? 'disponivel' : 'ocupado'}`}
+                    className={`${styles.assento} ${assento.disponivel ? 'disponivel' : 'ocupado'}`}
                 >
                 </div>
             ))}

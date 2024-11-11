@@ -1,6 +1,6 @@
 .bolinha {
-    width: 16px;
-    height: 16px;
+    width: var(--circle-size);
+    height: var(--circle-size);
     border-radius: 50%;
 
     display: inline-block;

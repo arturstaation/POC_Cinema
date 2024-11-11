@@ -1,18 +1,61 @@
 :root {
 
-    --fundo-light-mode: #1A1A24;
-    --fundo-dark-mode: #F0F0F0;
-    --assento-disponivel: #F0F0F0;
-    --assento-ocupado: #505050;
-    --assento-selecionado: #CD4A3E;
-    --texto-light-mode: #1A1A24;
-    --texto-dark-mode: #F0F0F0;
-    --cor-botao: #DB3D2E;
-    --texto-tela: #F0F0F0;
-    --cor-tela-cinema-dark-mode: #505050;
-    --cor-tela-cinema-light-mode: #BABABA;
-    --square-size: 32px;
+    --branco: #F0F0F0;
+    --preto: #1A1A24;
+    --cinza-claro: #BABABA;
+    --cinza-escuro: #505050;
+    --vermelho-fraco: #CD4A3E;
+    --vermelho-forte: #DB3D2E;
 
+    --fundo-light-mode: var(--branco);
+    --fundo-dark-mode: var(--preto);
+
+    --texto-light-mode: var(--preto);
+    --texto-dark-mode: var(--branco);
+
+    --assento-disponivel-dark-mode: var(--branco);
+    --assento-disponivel-light-mode: var(--cinza-claro);
+
+
+    --assento-selecionado-dark-mode: var(--vermelho-fraco);
+    --assento-selecionado-light-mode: var(--vermelho-forte);
+
+
+    --assento-ocupado-dark-mode: var(--cinza-escuro);
+    --assento-ocupado-light-mode: var(--preto);
+
+    --cor-tela-dark-mode: var(--cinza-escuro);
+    --cor-tela-light-mode: var(--cinza-claro);
+
+    --botao-dark-mode: var(--vermelho-fraco);
+    --botao-light-mode: var(--vermelho-forte);
+
+    --square-size: 32px;
+    --circle-size: 16px;
+
+
+}
+
+.lightMode {
+
+    --fundo: var(--fundo-light-mode);
+    --texto: var(--texto-light-mode);
+    --assento-disponivel: var(--assento-disponivel-light-mode);
+    --assento-ocupado: var(--assento-ocupado-light-mode);
+    --assento-selecionado: var(--assento-selecionado-light-mode);
+    --tela: var(--cor-tela-light-mode);
+    --botao: var(--botao-light-mode);
+}
+
+.darkMode {
+
+    --fundo: var(--fundo-dark-mode);
+    --texto: var(--texto-dark-mode);
+    --assento-disponivel: var(--assento-disponivel-dark-mode);
+    --assento-ocupado: var(--assento-ocupado-dark-mode);
+    --assento-selecionado: var(--assento-selecionado-dark-mode);
+    --tela: var(--cor-tela-dark-mode);
+    --botao: var(--botao-dark-mode);
 }
 
 .ocupado {
@@ -22,7 +65,7 @@
 
 .disponivel {
 
-    background-color: var(--assento-ocupado);
+    background-color: var(--assento-disponivel);
 
 }
 
@@ -30,4 +73,13 @@
 
     background-color: var(--assento-selecionado);
 
+}
+
+.espacamento {
+    margin-bottom: 40px;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
 }
