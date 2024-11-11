@@ -17,3 +17,19 @@
     margin: 0;
     padding: 0;
 }
+
+#botao_comprar h1{
+
+    font-family: 'SF Compact', sans-serif;
+    font-weight: 350;
+    font-size: 32px;
+
+}
+
+#botao_comprar p{
+
+    font-family: 'SF Compact', sans-serif;
+    font-weight: 350;
+    font-size: 16px;
+
+}

@@ -39,7 +39,7 @@ function TituloConteudo({ endpoint }) {
 
     return (
         <div id={`${endpoint === 'Titulo' ? styles.titulo_conteudo : ''}`} className={styles.conteudo_filme}>
-            <h1>{titulo}</h1>
+            <h1><strong>{titulo}</strong></h1>
             <p>{conteudo}</p>
         </div>
     );

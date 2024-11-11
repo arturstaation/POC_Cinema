@@ -33,10 +33,38 @@
     --square-size: 32px;
     --circle-size: 16px;
 
+    --margem-desktop: 32px;
+    --margem-celular: 40px;
+
+    --margem: var(--margem-desktop);
+
     
 
 
 }
+@font-face {
+    font-family: 'SF Compact';
+    src: url('../fonts/SF-Compact-Display-Ultralight.otf') format('truetype');
+    font-weight: 250;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'SF Compact';
+    src: url('../fonts/SF-Compact-Display-Light.otf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'SF Compact';
+    src: url('../fonts/SF-Compact-Display-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+
+
 
 .lightMode {
     --fundo: var(--fundo-light-mode);
@@ -87,5 +115,13 @@
 body {
     background-color: var(--fundo);
     color: var(--texto);
-    gap: 32px;
+    gap: var(--margem);
+}
+
+
+@media (max-width: 768px) {
+
+    :root{
+        --margem: var(--margem-celular);
+    }
 }

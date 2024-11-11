@@ -1,3 +1,19 @@
+.conteudo_filme h1{
+    
+    font-family: 'SF Compact', sans-serif;
+    font-weight: 350;
+    font-size: 18px;
+}
+
+.conteudo_filme p{
+    
+    font-family: 'SF Compact', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+
+
 #titulo_conteudo {
     display: flex;
     flex-direction: column;
@@ -9,8 +25,22 @@
     
     margin: 0px;
     padding: 0px;
-
 }
+
+#titulo_conteudo h1{
+    
+    font-family: 'SF Compact', sans-serif;
+    font-weight: 790;
+    font-size: 40px;
+}
+
+#titulo_conteudo p{
+    
+    font-family: 'SF Compact', sans-serif;
+    font-weight: 200;
+    font-size: 32px;
+}
+
 
 @media (max-width: 768px) {
   .conteudo_filme {

@@ -8,5 +8,11 @@
 }
 
 .legenda {
+
+    
+    font-family: 'SF Compact', sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+
     margin-right: 12px;
 }
