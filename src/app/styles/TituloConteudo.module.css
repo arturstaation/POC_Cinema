@@ -4,3 +4,21 @@
     align-items: center;
     text-align: center;
 }
+
+#titulo_conteudo h1, #titulo_conteudo p{
+    
+    margin: 0px;
+    padding: 0px;
+
+}
+
+@media (max-width: 768px) {
+  .conteudo_filme {
+    display: none; 
+  }
+
+  #titulo_conteudo {
+    display: flex;
+  }
+}
+

@@ -1,10 +1,12 @@
-import styles from '../styles/TituloConteudo.module.css'
+'use client';
 
+import { useState, useEffect } from 'react';
+import styles from '../styles/TituloConteudo.module.css';
 
-async function TituloConteudo({ endpoint }) {
+function TituloConteudo({ endpoint }) {
+    const [titulo, setTitulo] = useState('');
+    const [conteudo, setConteudo] = useState('');
 
-    var titulo = '';
-    var conteudo = '';
     const endpoints = {
         "Titulo": { url: "http://localhost:3000/titulo", titulo: "" },
         "Sinopse": { url: "http://localhost:3000/sinopse", titulo: "Sinopse do filme" },
@@ -12,34 +14,35 @@ async function TituloConteudo({ endpoint }) {
         "Direção": { url: "http://localhost:3000/direcao", titulo: "Direção" }
     };
 
+    useEffect(() => {
+        const fetchData = async () => {
+            if (endpoints[endpoint]) {
+                const request = await fetch(endpoints[endpoint].url);
+                if (request.ok) {
+                    const data = await request.text();
+                    setTitulo(endpoints[endpoint].titulo || data);
+                    setConteudo(data);
 
-    if (endpoints[endpoint]) {
-        let request = await fetch(endpoints[endpoint].url);
-        if (request.ok) {
-
-            conteudo = await request.text();
-            titulo = endpoints[endpoint].titulo || conteudo;
-
-            if (endpoint == "Titulo") {
-                let requestHorario = await fetch("http://localhost:3000/horario");
-                if (requestHorario.ok) {
-
-                    conteudo = await requestHorario.text();
+                    if (endpoint === "Titulo") {
+                        const requestHorario = await fetch("http://localhost:3000/horario");
+                        if (requestHorario.ok) {
+                            const horarioData = await requestHorario.text();
+                            setConteudo(horarioData);
+                        }
+                    }
                 }
             }
-        }
-    }
+        };
+        
+        fetchData();
+    }, [endpoint]);
 
     return (
-        <div id={`${endpoint == 'Titulo' ? styles.titulo_conteudo : ''}`}>
+        <div id={`${endpoint === 'Titulo' ? styles.titulo_conteudo : ''}`} className={styles.conteudo_filme}>
             <h1>{titulo}</h1>
             <p>{conteudo}</p>
         </div>
     );
-
-
-
 }
-
 
 export default TituloConteudo;

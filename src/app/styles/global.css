@@ -33,11 +33,12 @@
     --square-size: 32px;
     --circle-size: 16px;
 
+    
+
 
 }
 
 .lightMode {
-
     --fundo: var(--fundo-light-mode);
     --texto: var(--texto-light-mode);
     --assento-disponivel: var(--assento-disponivel-light-mode);
@@ -79,7 +80,12 @@
     margin-bottom: 40px;
 }
 
+.espacamento_direita{
+    margin-right: 40px;
+}
+
 body {
     background-color: var(--fundo);
     color: var(--texto);
+    gap: 32px;
 }

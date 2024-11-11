@@ -2,8 +2,6 @@
     width: 322px;
     height: 21px;
     background-color: var(--tela);
-    margin: 0px;
-    padding: 0px;
 }
 
 #containerTela {
@@ -12,6 +10,10 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+}
+
+#containerTela p{
     padding: 0px;
     margin: 0px;
+
 }

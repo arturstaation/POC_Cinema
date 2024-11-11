@@ -11,6 +11,7 @@
 .assento {
     width: var(--square-size);
     height: var(--square-size);
+    border-radius: 10px;
 }
 
 .assento.disponivel {

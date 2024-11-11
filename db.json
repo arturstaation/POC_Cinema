@@ -8,7 +8,7 @@
     "assentos": [
       {
         "numero": 1,
-        "disponivel": true
+        "disponivel": false
       },
       {
         "numero": 2,
@@ -20,7 +20,7 @@
       },
       {
         "numero": 4,
-        "disponivel": true
+        "disponivel": false
       },
       {
         "numero": 5,
@@ -28,7 +28,7 @@
       },
       {
         "numero": 6,
-        "disponivel": true
+        "disponivel": false
       },
       {
         "numero": 7,
@@ -40,11 +40,11 @@
       },
       {
         "numero": 9,
-        "disponivel": true
+        "disponivel": false
       },
       {
         "numero": 10,
-        "disponivel": true
+        "disponivel": false
       },
       {
         "numero": 11,

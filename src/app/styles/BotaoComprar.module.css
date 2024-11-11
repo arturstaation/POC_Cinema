@@ -9,6 +9,7 @@
     height: 81px;
     border-radius: 24px;
     color: var(--branco);
+    border: none;
 }
 
 #botao_comprar h1,

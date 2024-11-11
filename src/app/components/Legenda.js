@@ -1,7 +1,7 @@
 import styles from '../styles/Legenda.module.css'
 import BolinhaTexto from './BolinhaTexto';
 
-async function Legenda() {
+function Legenda() {
 
 
     return (

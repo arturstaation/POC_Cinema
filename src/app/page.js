@@ -1,3 +1,5 @@
+'use client'
+import { useState } from 'react';
 import BotaoComprar from './components/BotaoComprar';
 import DadosFilme from './components/DadosFilme';
 import Sala from './components/Sala';
@@ -7,18 +9,29 @@ import './styles/global.css';
 
 function HomePage() {
 
-  return (
-    <main id={styles.tudo} className='lightMode'>
+  const [listaAssentos, setListaAssentos] = useState([]);
 
+  const handleListaAssentos = (disponivel, id) => {
+    if(disponivel){
+      setListaAssentos((prevLista) => 
+        prevLista.includes(id)
+          ? prevLista.filter((assento) => assento !== id)
+          : [...prevLista, id]);
+    }
+  };
+
+  return (
+    <main id={styles.tudo}>
       <TituloConteudo endpoint="Titulo" />
-      <section id={styles.principal} >
-        <Sala></Sala>
+      
+      <section id={styles.principal}>
+        <Sala onToggleAssento={handleListaAssentos} listaAssentos={listaAssentos}></Sala>
         <DadosFilme></DadosFilme>
       </section>
-      <BotaoComprar id="compra" listaAssentos={[]}></BotaoComprar>
+      
+      <BotaoComprar id="compra" listaAssentos={listaAssentos}></BotaoComprar>
     </main>
   );
-
 }
 
 export default HomePage;

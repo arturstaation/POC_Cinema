@@ -4,17 +4,16 @@ import Lugares from './Lugares';
 import Tela from './Tela';
 
 
-async function Sala() {
-
+function Sala({onToggleAssento, listaAssentos = []}) {
 
     return (
-        <container id={styles.container_sala}>
-            <div className='espacamento'>
-                <Lugares id={styles.lugares}></Lugares>
+        <div id={styles.container_sala}>
+            <div className='espacamento espacamento_direita'>
+                <Lugares id={styles.lugares} listaAssentos={listaAssentos} onToggleAssento={onToggleAssento}></Lugares>
                 <Tela></Tela>
             </div>
             <Legenda></Legenda>
-        </container>
+        </div>
     );
 }
 
