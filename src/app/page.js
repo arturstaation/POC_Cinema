@@ -1,5 +1,5 @@
 'use client'
-import {  useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import BotaoComprar from './components/BotaoComprar';
 import DadosFilme from './components/DadosFilme';
 import Sala from './components/Sala';
@@ -12,8 +12,8 @@ function HomePage() {
   const [listaAssentos, setListaAssentos] = useState([]);
 
   const handleListaAssentos = (disponivel, id) => {
-    if(disponivel){
-      setListaAssentos((prevLista) => 
+    if (disponivel) {
+      setListaAssentos((prevLista) =>
         prevLista.includes(id)
           ? prevLista.filter((assento) => assento !== id)
           : [...prevLista, id]);
@@ -22,17 +22,17 @@ function HomePage() {
 
 
   return (
-    <body className='darkMode'>
-    <main id={styles.tudo}>
-      <TituloConteudo endpoint="Titulo" />
-      
-      <section id={styles.principal}>
-        <Sala onToggleAssento={handleListaAssentos} listaAssentos={listaAssentos}></Sala>
-        <DadosFilme></DadosFilme>
-      </section>
-      
-      <BotaoComprar id="compra" listaAssentos={listaAssentos}></BotaoComprar>
-    </main>
+    <body>
+      <main id={styles.tudo}>
+        <TituloConteudo endpoint="Titulo" />
+
+        <section id={styles.principal}>
+          <Sala onToggleAssento={handleListaAssentos} listaAssentos={listaAssentos}></Sala>
+          <DadosFilme></DadosFilme>
+        </section>
+
+        <BotaoComprar id="compra" listaAssentos={listaAssentos}></BotaoComprar>
+      </main>
     </body>
   );
 

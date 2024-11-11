@@ -38,53 +38,57 @@
 
     --margem: var(--margem-desktop);
 
-    
+
 
 
 }
+
 @font-face {
     font-family: 'SF Compact';
     src: url('../fonts/SF-Compact-Display-Ultralight.otf') format('truetype');
     font-weight: 250;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'SF Compact';
     src: url('../fonts/SF-Compact-Display-Light.otf') format('truetype');
     font-weight: 300;
     font-style: normal;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: 'SF Compact';
     src: url('../fonts/SF-Compact-Display-Bold.otf') format('truetype');
     font-weight: bold;
     font-style: normal;
-  }
-  
-
-
-
-.lightMode {
-    --fundo: red;
-    --texto: var(--texto-light-mode);
-    --assento-disponivel: var(--assento-disponivel-light-mode);
-    --assento-ocupado: var(--assento-ocupado-light-mode);
-    --assento-selecionado: var(--assento-selecionado-light-mode);
-    --tela: var(--cor-tela-light-mode);
-    --botao: var(--botao-light-mode);
 }
 
-.darkMode {
 
-    --fundo: var(--fundo-dark-mode);
-    --texto: var(--texto-dark-mode);
-    --assento-disponivel: var(--assento-disponivel-dark-mode);
-    --assento-ocupado: var(--assento-ocupado-dark-mode);
-    --assento-selecionado: var(--assento-selecionado-dark-mode);
-    --tela: var(--cor-tela-dark-mode);
-    --botao: var(--botao-dark-mode);
+
+@media (prefers-color-scheme: light) {
+    body {
+        --fundo: var(--fundo-light-mode);
+        --texto: var(--texto-light-mode);
+        --assento-disponivel: var(--assento-disponivel-light-mode);
+        --assento-ocupado: var(--assento-ocupado-light-mode);
+        --assento-selecionado: var(--assento-selecionado-light-mode);
+        --tela: var(--cor-tela-light-mode);
+        --botao: var(--botao-light-mode);
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --fundo: var(--fundo-dark-mode);
+        --texto: var(--texto-dark-mode);
+        --assento-disponivel: var(--assento-disponivel-dark-mode);
+        --assento-ocupado: var(--assento-ocupado-dark-mode);
+        --assento-selecionado: var(--assento-selecionado-dark-mode);
+        --tela: var(--cor-tela-dark-mode);
+        --botao: var(--botao-dark-mode);
+    }
 }
 
 .ocupado {
@@ -108,7 +112,7 @@
     margin-bottom: 40px;
 }
 
-.espacamento_direita{
+.espacamento_direita {
     margin-right: 40px;
 }
 
@@ -121,8 +125,7 @@ body {
 
 @media (max-width: 600px) {
 
-    :root{
+    :root {
         --margem: var(--margem-celular);
     }
 }
-
