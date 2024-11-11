@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import {  useEffect, useState } from 'react';
 import BotaoComprar from './components/BotaoComprar';
 import DadosFilme from './components/DadosFilme';
 import Sala from './components/Sala';
@@ -20,7 +20,9 @@ function HomePage() {
     }
   };
 
+
   return (
+    <body className='darkMode'>
     <main id={styles.tudo}>
       <TituloConteudo endpoint="Titulo" />
       
@@ -31,7 +33,9 @@ function HomePage() {
       
       <BotaoComprar id="compra" listaAssentos={listaAssentos}></BotaoComprar>
     </main>
+    </body>
   );
+
 }
 
 export default HomePage;

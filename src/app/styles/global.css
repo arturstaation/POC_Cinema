@@ -67,7 +67,7 @@
 
 
 .lightMode {
-    --fundo: var(--fundo-light-mode);
+    --fundo: red;
     --texto: var(--texto-light-mode);
     --assento-disponivel: var(--assento-disponivel-light-mode);
     --assento-ocupado: var(--assento-ocupado-light-mode);
@@ -119,9 +119,10 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     :root{
         --margem: var(--margem-celular);
     }
 }
+
