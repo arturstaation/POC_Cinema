@@ -1,12 +1,17 @@
 #principal {
+  margin: 0px;
+  padding: 0px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  height: 100vh;
 }
 
 #tudo {
+  margin: 0px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
 }

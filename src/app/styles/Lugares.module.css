@@ -1,0 +1,14 @@
+#todosLugares {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calc((32px + 8px) * 8);
+    gap: 8px;
+    justify-content: center;
+    padding: 16px;
+
+}
+
+.assento {
+    width: var(--square-size);
+    height: var(--square-size);
+}

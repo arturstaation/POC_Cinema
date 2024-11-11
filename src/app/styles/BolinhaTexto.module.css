@@ -1,0 +1,12 @@
+.bolinha {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.legenda {
+    margin-right: 12px;
+}

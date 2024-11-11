@@ -1,4 +1,4 @@
-import '../DadosFilme.module.css'
+import styles from '../styles/DadosFilme.module.css'
 import TituloConteudo from './TituloConteudo';
 
 

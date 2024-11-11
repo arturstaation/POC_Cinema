@@ -1,0 +1,5 @@
+#estados {
+    display: flex;
+    flex-direction: row;
+    margin-right: 24px;
+}

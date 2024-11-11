@@ -3,8 +3,8 @@ import BotaoComprar from './components/BotaoComprar';
 import DadosFilme from './components/DadosFilme';
 import Sala from './components/Sala';
 import TituloConteudo from './components/TituloConteudo';
-
-import styles from "./page.module.css";
+import styles from "./styles/page.module.css";
+import './styles/global.css';
 
 function HomePage() {
 

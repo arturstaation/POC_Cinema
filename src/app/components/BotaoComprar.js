@@ -1,5 +1,5 @@
 
-import '../BotaoComprar.module.css'
+import styles from '../styles/BotaoComprar.module.css'
 
 function BotaoComprar() {
     return (

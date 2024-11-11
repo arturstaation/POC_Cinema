@@ -1,4 +1,4 @@
-import '../TituloConteudo.module.css'
+import styles from '../styles/TituloConteudo.module.css'
 
 
 async function TituloConteudo({ endpoint }) {
@@ -11,6 +11,7 @@ async function TituloConteudo({ endpoint }) {
         "Data": { url: "http://localhost:3000/dataLancamento", titulo: "Data de lançamento" },
         "Direção": { url: "http://localhost:3000/direcao", titulo: "Direção" }
     };
+
 
     if (endpoints[endpoint]) {
         let request = await fetch(endpoints[endpoint].url);
@@ -27,14 +28,18 @@ async function TituloConteudo({ endpoint }) {
                 }
             }
         }
-
-        return (
-            <div id="titulo_conteudo">
-                <h1 id="titulo">{titulo}</h1>
-                <p id="conteudo">{conteudo}</p>
-            </div>
-        );
     }
+
+    return (
+        <div id="titulo_conteudo">
+            <h1 id="titulo">{titulo}</h1>
+            <p id="conteudo">{conteudo}</p>
+        </div>
+    );
+
+
+
 }
+
 
 export default TituloConteudo;

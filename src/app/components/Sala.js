@@ -1,27 +1,22 @@
-import '../Sala.module.css'
+import styles from '../styles/Sala.module.css'
+import Legenda from './Legenda';
+import Lugares from './Lugares';
+import Tela from './Tela';
 
 
 async function Sala() {
 
-    const request = await fetch("http://localhost:3000/assentos");
-    let response = [];
-    if (request.ok) {
-
-        response = await request.json();
-    }
 
     return (
-
-        <div>
-            {response.map((assento) => (
-                <div
-                    key={assento.id}
-                >
-                    {assento.numero}
-                </div>
-            ))}
-        </div>
+        <section >
+            <div>
+                <Lugares></Lugares>
+                <Tela></Tela>
+            </div>
+            <Legenda></Legenda>
+        </section>
     );
 }
+
 
 export default Sala;

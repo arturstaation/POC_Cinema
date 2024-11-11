@@ -1,0 +1,33 @@
+:root {
+
+    --fundo-light-mode: #1A1A24;
+    --fundo-dark-mode: #F0F0F0;
+    --assento-disponivel: #F0F0F0;
+    --assento-ocupado: #505050;
+    --assento-selecionado: #CD4A3E;
+    --texto-light-mode: #1A1A24;
+    --texto-dark-mode: #F0F0F0;
+    --cor-botao: #DB3D2E;
+    --texto-tela: #F0F0F0;
+    --cor-tela-cinema-dark-mode: #505050;
+    --cor-tela-cinema-light-mode: #BABABA;
+    --square-size: 32px;
+
+}
+
+.ocupado {
+
+    background-color: var(--assento-ocupado);
+}
+
+.disponivel {
+
+    background-color: var(--assento-ocupado);
+
+}
+
+.selecionado {
+
+    background-color: var(--assento-selecionado);
+
+}
