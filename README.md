@@ -452,28 +452,28 @@ O código do servidor local é configurado usando o `JSON Server`, que cria uma 
 
  Para rodar o servidor local com a API:
 
-1. Baixar projeto
- - Acesse o repositório do projeto e clique em **"Código"**.
- - Selecione a opção **"Baixar ZIP"** para obter o arquivo compactado do projeto.
+1. *Baixar projeto*
+   - Acesse o repositório do projeto e clique em **"Código"**.
+   - Selecione a opção **"Baixar ZIP"** para obter o arquivo compactado do projeto.
 
-2. Descompactar o Arquivo
-   - Após o download, localize o arquivo ZIP em seu computador.  
+2. *Descompactar o Arquivo*
+   - Após o download, localize o arquivo ZIP em seu computador.
    - Descompacte o arquivo para uma pasta de sua escolha.
 
-3. Instale as dependências do projeto:
+4. *Instale as dependências do projeto:*
 ```
 npm install
 ```
-4. Inicie o servidor da API com o **json-server**. (O json-server deve utilizar o `localhost:3000`):
+4. *Inicie o servidor da API com o **json-server**. (O json-server deve utilizar o `localhost:3000`)*:
 
 ```
 npx json-server db.json
 ```
-5. Abra um novo terminal e inicie a aplicação Next.js:
+5. *Abra um novo terminal e inicie a aplicação Next.js*:
 ```
 npm  run  dev
 ```
-6.   Acesse a aplicação em `http://localhost:3001`
+6. *Acesse a aplicação em `http://localhost:3001`*
 
 
 
