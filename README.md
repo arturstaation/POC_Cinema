@@ -1,4 +1,3 @@
-  
 # POC 6 - CINEMA
 
 ## Feito Por:
@@ -31,7 +30,7 @@
 
   A POC é composto por diversos componentes que interagem entre si para formar a aplicação final. Cada componente tem uma função específica, sendo responsável por uma parte importante da interface e da lógica de negócios. Abaixo, explico como esses componentes se organizam e como a comunicação entre eles ocorre.
 
-A aplicação utiliza uma API local, que é uma simulação de um backend real, criada utilizando o JSON Server. Essa API local é responsável por fornecer os dados necessários para a interface, como as informações sobre o filme e os assentos disponíveis para compra. A estrutura da API é baseada no arquivo `db.json`, que contém os dados dos assentos e as informações sobre o filme, como título, sinopse, data de lançamento, direção, horário e preço.
+A aplicação utiliza uma API local, que é uma simulação de um backend real, criada utilizando o JSON Server. Essa API local é responsável por fornecer os dados necessários para a interface, como as informações sobre o filme e os assentos disponíveis para compra. A estrutura da API é baseada no arquivo `db.json`, que contém os dados dos assentos e as informações sobre o filme, como título, sinopse, data de lançamento, direção, horário e preço, a aplicação não o manipula, apenas utiliza suas informações.
 
 Quando a página é carregada, o frontend faz uma requisição para essa API para obter as informações necessárias.
 
@@ -46,16 +45,9 @@ Primeiro, criamos o projeto Next.js:
 
 ```bash
 npx create-next-app@latest poc-cinema
-cd cinema-poc
+cd poc-cinema
 ```
 
-Instale as dependências necessárias:
-
-```bash
-npm install
-```
-
-  
 
 ### 2. Estrutura de Componentes
 
@@ -460,20 +452,28 @@ O código do servidor local é configurado usando o `JSON Server`, que cria uma 
 
  Para rodar o servidor local com a API:
 
-1. Instale as dependências do projeto:
+1. Baixar projeto
+ - Acesse o repositório do projeto e clique em **"Código"**.
+ - Selecione a opção **"Baixar ZIP"** para obter o arquivo compactado do projeto.
+
+2. Descompactar o Arquivo
+   - Após o download, localize o arquivo ZIP em seu computador.  
+   - Descompacte o arquivo para uma pasta de sua escolha.
+
+3. Instale as dependências do projeto:
 ```
 npm install
 ```
-2. Inicie o servidor da API com o **json-server**:
+4. Inicie o servidor da API com o **json-server**. (O json-server deve utilizar o `localhost:3000`):
 
 ```
 npx json-server db.json
 ```
-3. Em um novo terminal, inicie a aplicação Next.js:
+5. Abra um novo terminal e inicie a aplicação Next.js:
 ```
 npm  run  dev
 ```
-4.   Acesse a aplicação em `http://localhost:3000`
+6.   Acesse a aplicação em `http://localhost:3001`
 
 
 
@@ -483,5 +483,13 @@ npm  run  dev
 
 Ao acessar a aplicação, você verá a interface do cinema com assentos interativos. O usuário pode selecionar os assentos e simular a compra, e todas as informações dinâmicas, como título, sinopse, preço e assentos, são carregadas da API.
 
-Abaixo uma imagem da aplicação em execução: 
-![](POC_CINEMA_IMG.png)	
+#### A pagina inicial exibida é:
+![](Imagens_readme/homepage.png)
+
+#### Ao selecionar assentos "livres" (em branco) o estado dele é alterado para "selecionado" em laranja cada assento selecionado aumenta o valor total em R$25,00. 
+#### Não é possivel selecionar os assentos "ocupados" (em preto):
+![](Imagens_readme/AoClicarEm.png)
+
+#### Ao Pressionar o botão "Comprar" uma mensagem é exibida "Compra realizada com sucesso".
+![](Imagens_readme/comprar.png)
+
