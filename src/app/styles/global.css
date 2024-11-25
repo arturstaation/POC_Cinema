@@ -1,4 +1,7 @@
 :root {
+    /*Combinação de Cores do Figma*/
+    /*
+    */
 
     --branco: #F0F0F0;
     --preto: #1A1A24;
@@ -6,6 +9,46 @@
     --cinza-escuro: #505050;
     --vermelho-fraco: #CD4A3E;
     --vermelho-forte: #DB3D2E;
+
+    /*Segunda Combinação de cores*/
+    /*
+    --branco: #FFFFFF;
+    --preto: #0D0D0D;
+    --cinza-claro: #D9D9D9;
+    --cinza-escuro: #3A3A3A;
+    --vermelho-fraco: #FF6A55;
+    --vermelho-forte: #E63946;
+    */
+
+
+
+    /*Terceira Combinação de cores*/
+    /*
+    --branco: #F5F9FF;
+    --preto: #1C1E26;
+    --cinza-claro: #88C0D0;
+    --cinza-escuro: #4C566A;
+    --vermelho-fraco: #BF616A;
+    --vermelho-forte: #D08770;
+    --botao-dark-mode: #A3BE8C;
+    --botao-light-mode: #8FBCBB;
+    */
+
+
+    /*Quarta Combinação de Cores*/
+    /*
+    --branco: #FFF4E6;
+    --preto: #2B2D42;
+    --cinza-claro: #FFD166;
+    --cinza-escuro: #3D348B;
+    --vermelho-fraco: #EF476F;
+    --vermelho-forte: #FF6F59;
+    --botao-dark-mode: #06D6A0;
+    --botao-light-mode: #118AB2;
+    */
+
+
+
 
     --fundo-light-mode: var(--branco);
     --fundo-dark-mode: var(--preto);
